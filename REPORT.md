@@ -10,9 +10,9 @@
 
 ## Результаты тестирования
 
-```
-<img width="1811" height="400" alt="image" src="https://github.com/user-attachments/assets/f960d461-598e-4c14-89b6-56fc93c35d74" /> 
-```
+
+
+![Прогон тестов](screenshot.png)
 
 ## История версий
 
