@@ -17,7 +17,7 @@ def check_guess(secret, guess):
 def play_game(secret, min_val, max_val, input_func=input, output_func=print):
     attempts = 0
     while True:
-        raw = input_func()
+        raw = input_func().strip()
         try:
             guess = int(raw)
         except ValueError:
@@ -27,6 +27,7 @@ def play_game(secret, min_val, max_val, input_func=input, output_func=print):
             output_func(f"Число должно быть от {min_val} до {max_val}.")
             continue
         attempts += 1
+        output_func(f"Попытка №{attempts}")
         result = check_guess(secret, guess)
         if result == "correct":
             output_func(f"Поздравляем! Вы угадали число {secret} за {attempts} попыток!")

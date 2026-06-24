@@ -106,3 +106,27 @@ class TestPlayGame:
             output_func=lambda msg: outputs.append(msg),
         )
         assert attempts == 1
+
+    def test_play_game_empty_string_does_not_crash(self):
+        inputs = ["", "50"]
+        outputs = []
+        attempts = play_game(
+            secret=50,
+            min_val=-100,
+            max_val=100,
+            input_func=lambda: inputs.pop(0),
+            output_func=lambda msg: outputs.append(msg),
+        )
+        assert attempts == 1
+
+    def test_play_game_whitespace_string_does_not_crash(self):
+        inputs = ["   ", "50"]
+        outputs = []
+        attempts = play_game(
+            secret=50,
+            min_val=-100,
+            max_val=100,
+            input_func=lambda: inputs.pop(0),
+            output_func=lambda msg: outputs.append(msg),
+        )
+        assert attempts == 1
