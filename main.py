@@ -22,7 +22,8 @@ def show_leaderboard():
     print(f"{'#':<4} {'Ник':<15} {'Попытки':<8} {'Дата':<20}")
     print("-" * 50)
     for i, rec in enumerate(records, 1):
-        print(f"{i:<4} {rec[1]:<15} {rec[2]:<8} {rec[3]}")
+        nick = rec[1][:15] + "…" if len(rec[1]) > 15 else rec[1]
+        print(f"{i:<4} {nick:<15} {rec[2]:<8} {rec[3]}")
 
 
 def new_game():
