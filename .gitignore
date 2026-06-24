@@ -4,3 +4,6 @@ __pycache__/
 .pytest_cache/
 .venv/
 .idea/
+.coverage
+instruct.txt
+checklist_runner.py
